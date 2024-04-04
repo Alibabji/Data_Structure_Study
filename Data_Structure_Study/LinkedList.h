@@ -31,5 +31,4 @@ public:
 	bool isEmpty();
 	int length();
 };
-
 #endif
