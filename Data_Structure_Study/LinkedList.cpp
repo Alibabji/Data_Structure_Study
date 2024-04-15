@@ -88,13 +88,13 @@ T LinkedList<T>::popFront()
 		return NULL;
 	}
 
-	T temp = head->prev->data;
+	T temp = head->data;
 	head = head->next;
 	delete head->prev;
 	head->prev = NULL;
 	size--;
 
-	return T;
+	return temp;
 }
 template <typename T>
 T LinkedList<T>::popBack()
@@ -115,7 +115,7 @@ T LinkedList<T>::popBack()
 		return NULL;
 	}
 
-	T temp = end->next->data;
+	T temp = end->data;
 	end = end->prev;
 	delete end->next;
 	end->next = NULL;
@@ -182,8 +182,9 @@ void LinkedList<T>::output()
 {
 	for (Node<T>* iter = head; iter != NULL; iter = iter->next)
 	{
-		cout << iter->data << " ";
+		cout << iter->data << '\n';
 	}
+	cout << '\n';
 }
 template <typename T>
 int LinkedList<T>::length()
@@ -194,4 +195,10 @@ template <typename T>
 bool LinkedList<T>::isEmpty()
 {
 	return (size ? false : true);
+}
+template <typename T>
+LinkedList<T>::~LinkedList()
+{
+	while(size > 0)
+		remove(0);
 }
