@@ -1,7 +1,7 @@
 #include "LinkedList.h"
 #include <bits/stdc++.h>
 using namespace std;
-	
+
 template <typename T>
 LinkedList<T>::LinkedList()
 {
@@ -202,4 +202,3 @@ LinkedList<T>::~LinkedList()
 	while(size > 0)
 		remove(0);
 }
-
