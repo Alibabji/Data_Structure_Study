@@ -1,6 +1,6 @@
 #pragma once
-#ifndef __LINKEDLIST_H__
-#define __LINKEDLIST_H__
+#ifndef __LINKEDLIST2_H__
+#define __LINKEDLIST2_H__
 #include <bits/stdc++.h>
 
 template <typename T>
@@ -30,5 +30,6 @@ public:
 	void output();
 	bool isEmpty();
 	int length();
+	~LinkedList();
 };
 #endif
