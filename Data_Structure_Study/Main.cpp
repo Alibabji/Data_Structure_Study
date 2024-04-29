@@ -3,6 +3,8 @@
 #include "LinkedList.cpp"
 #include "Stack.h"
 #include "Stack.cpp"
+#include "Queue.h"
+#include "Queue.cpp"
 using namespace std;
 
 int main() {
@@ -37,6 +39,16 @@ int main() {
 	stack.output();
 	stack.pop();
 	stack.output();
+
+	cout << "Queue <double>\n";
+	Queue<double> queue;
+	queue.enqueue(1.11);
+	queue.enqueue(2.22);
+	queue.enqueue(3.33);
+	queue.enqueue(4.44);
+	queue.output();
+	queue.dequeue();
+	queue.output();
 
     return 0;
 }
