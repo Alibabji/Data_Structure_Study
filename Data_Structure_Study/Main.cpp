@@ -5,6 +5,7 @@
 #include "Stack.cpp"
 #include "Queue.h"
 #include "Queue.cpp"
+#include "BinaryTree.h"
 using namespace std;
 
 int main() {
@@ -49,6 +50,27 @@ int main() {
 	queue.output();
 	queue.dequeue();
 	queue.output();
+
+
+	cout << "BinaryTree\n";
+	BT::BinaryTree tree;
+	tree.addNode(1);
+	tree.addNode(2);
+	tree.addNode(3);
+	tree.addNode(4);
+	tree.addNode(5);
+	tree.addNode(6);
+	tree.addNode(7);
+
+	cout << "PreOrder: ";
+	tree.preOrder();
+	cout << endl << "InOrder: ";
+	tree.inOrder();
+	cout << endl << "PostOrder: ";
+	tree.postOrder();
+	cout << endl<<"LevelOrder: ";
+	tree.levelOrder();
+	cout << endl;
 
     return 0;
 }
