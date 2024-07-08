@@ -8,7 +8,6 @@ namespace BT{
 		int data;
 		Node* left=NULL;
 		Node* right=NULL;
-		Node* parent;
 	};
 	class BinaryTree {
 	private:
